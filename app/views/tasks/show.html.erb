@@ -1,0 +1,8 @@
+<html>
+<h1><%= @list.title %></h1>
+<p><%= @list.details %></p>
+<p><%= @list.completed  %></p>
+ <%= link_to "🗑", task_path(@list), method: :delete, data: { confirm: "Really delete #{@list.title}?" } %>
+<li><%= link_to "edit", edit_task_path  %></li>
+<li><%= link_to "Back to list",  tasks_path %></li>
+</html>
